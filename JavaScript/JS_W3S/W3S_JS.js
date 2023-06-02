@@ -331,3 +331,104 @@ function JS_Number_Properties() {
 
     alert(msg);
 }
+
+function JS_Arrays() {
+
+     // An array is a special variable, which can hold more than one value.
+
+    /*     
+        Creating an Array:
+        1) const cars = ["Saab", "Volvo", "BMW"];            --> Using an array literal.
+        2) const cars = [];                                  --> You can also create an array, and then provide the elements.
+           cars[0]= "Saab";
+           cars[1]= "Volvo";
+           cars[2]= "BMW";
+        3) const cars = new Array("Saab", "Volvo", "BMW");  --> Using new keyword.
+        4) const person = ["John", "Doe", 46];
+        5) myArray[0] = Date.now; myArray[1] = myFunction; myArray[2] = myCars;
+        
+
+        let car = cars[0];                      --> You access an array element by referring to the index number.
+        cars[0] = "Opel";                       --> Changing the value of the first element in cars.
+        Array.forEach()                         --> Looping Array Elements
+        cars.push("Safari")                     --> Adding Array Elements
+        cars[cars.length] = "Nexson"            --> New element can also be added to an array using the length property
+
+        Associative Arrays:
+        - Many programming languages support arrays with named indexes.
+        - Arrays with named indexes are called associative arrays.
+        - JavaScript does not support arrays with named indexes. like this person["firstName"] = "John"        */
+         
+        const cars = ["Saab", "Volvo", "BMW"];
+
+    let msg = `Arrays:\n`                     
+        + `My Array: ${cars}\n`                                 // Full array can be accessed by referring to the array name.
+        + `Convert Array to String: ${cars.toString()}\n`       // The JavaScript method toString() converts an array to a string of (comma separated) array values.                    
+        + `Access Array Element: ${cars[0]}\n`                  // Accessing the First Array Element - You access an array element by referring to the index number.                    
+        + `Access Array Element: ${cars[cars.length-1]}\n`      // Accessing the Last Array Element.
+        + `Length of Array: ${cars[cars.length]}\n`             // Length of Array.
+        + `Length of Array: ${cars[cars.length]}\n`             // Length of Array.
+        ;
+
+    alert(msg);
+}
+
+function JS_Array_Methods() {
+
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    const myGirls = ["Cecilie", "Lone"];
+    const myBoys = ["Emil", "Tobias", "Linus"];
+  
+
+    let msg = `Array Methods:\n`    
+        + `My Array: ${fruits}\n`                  
+        + `fruits.length: ${fruits.length}\n`                           
+        + `fruits.toString(): ${fruits.toString()}\n`                           
+        + `fruits.pop(): ${fruits.pop()}\n`                         // The pop() method removes the last element from an array and returns the value that was "popped out".                         
+        + `fruits.length: ${fruits.length}\n`    
+        + `fruits.push("Kiwi"): ${fruits.push("Kiwi")}\n`           // The push() method adds a new element to an array (at the end) and returns the new array length.
+        + `fruits.shift(): ${fruits.shift()}\n`                     // The shift() method removes the first array element and "shifts" all other elements to a left index. This returns the value that was "shifted out".
+        + `fruits.length: ${fruits.length}\n`   
+        + `fruits.unshift("Lemon"): ${fruits.unshift("Lemon")}\n`   // The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements. This returns the new array length.
+        + `delete fruits[0]: ${delete fruits[0]}\n\n`               // Array elements can be deleted using the JavaScript operator delete. Using delete leaves undefined holes in the array. Use pop() or shift() instead.
+        
+        + `Merging (Concatenating) Arrays:\n`   
+        + `Array myGirls: ${myGirls}\n`   
+        + `Array myBoys: ${myBoys}\n`   
+        + `2 array Concat - myGirls.concat(myBoys): ${myGirls.concat(myBoys)}\n`                        // The concat() method creates a new array by merging (concatenating) existing arrays.
+        + `3 array Concat - myGirls.concat(myBoys, fruits): ${myGirls.concat(myBoys, fruits)}\n`        // The concat() method can take any number of array arguments. 
+        + `Strings as arguments - myGirls.concat(myBoys, "PJ"): ${myGirls.concat(myBoys,  "PJ")}\n\n`   // The concat() method can also take strings as arguments. 
+     
+        ;
+
+    alert(msg);
+}
+
+function JS_Array_Methods2() {
+    
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    const myArr = [[1,2],[3,4],[5,6]];
+    const myBoys = ["Emil", "Tobias", "Linus"];
+    const myGirls = ["Rani", "Rina", "Riya", "Rita", "ragini"];
+  
+
+    let msg = `Merging (Concatenating) Arrays:\n`                                           // Flattening an array is the process of reducing the dimensionality of an array.
+        + `myArr = [[1,2],[3,4],[5,6]]\n`                                                   
+        + `myArr.flat(): ${myArr.flat()}\n\n`                                               // The flat() method creates a new array with sub-array elements concatenated to a specified depth.
+         
+        + `Splicing and Slicing Arrays:\n`                                                  // The splice() method adds new items to an array and slices out a piece of an array.
+        + `My Array: ${fruits}\n`
+        + `fruits.splice(2, 1, "Lemon", "Kiwi"):${fruits.splice(2, 1, "Lemon", "Kiwi")}\n`  // The first parameter (2) defines the position where new elements should be added (spliced in).
+        + `Array after splice: ${fruits}\n\n`                                               // The second parameter (1) defines how many elements should be removed.
+                                                                                            // The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.  
+        + `Using splice() to Remove Elements:\n`         
+        + `Array myBoys: ${myBoys}\n`
+        + `myBoys.splice(0, 1): ${myBoys.splice(0, 1)}\n`                                   // You can use splice() to remove elements without leaving "holes" in the array and it returns the value that was "spliced out".
+        + `Array myGirls: ${myGirls}\n`
+        + `myGirls.slice(1, 3): ${myGirls.splice(1, 3)}\n`                                  // Slices out a part of an array starting from array element 1 to 3.
+        + `Array myGirls: ${myGirls}\n`
+
+        ;
+
+    alert(msg);
+}

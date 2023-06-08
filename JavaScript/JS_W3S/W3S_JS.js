@@ -432,3 +432,121 @@ function JS_Array_Methods2() {
 
     alert(msg);
 }
+
+function JS_Dates(){
+
+    const d = new Date();
+
+    let msg = `Creating Date Objects:\n`       
+    + `new Date(): ${new Date()}\n`      // JavaScript counts months from 0 to 11. Specifying a month higher than 11, will not result in an error but add the overflow to the next year, same for day as well.
+    + `new Date(year,month,day,hours,minutes,seconds) -> new Date(2023,5,1,3,30,45): ${new Date(2023,5,1,3,30,45)}\n`                
+    + `new Date(milliseconds) -> new Date(2023): ${new Date(2023)}\n`           // You cannot omit month. If you supply only one parameter it will be treated as milliseconds.              
+    + `new Date(milliseconds) -> new Date(-2023): ${new Date(-2023)}\n`         // January 01 1970 minus 2023000 milliseconds. 
+    + `Previous Century -> new Date(99, 11, 24): ${new Date(99, 11, 24)}\n\n`   // One and two digit years will be interpreted as 19xx.
+    
+    + `Displaying Dates:\n`                                 
+    + `d.toString(): ${d.toString()}\n`                     // toString() method is automatically converting date to string.
+    + `d.toDateString(): ${d.toDateString()}\n`             // toDateString() method converts a date to a more readable format.
+    + `d.toUTCString(): ${d.toUTCString()}\n`               // toUTCString() method converts a date to a string using the UTC standard.
+    + `d.toISOString(): ${d.toISOString()}\n`               // toISOString() method converts a date to a string using the ISO standard.
+
+    ;
+
+    alert(msg);
+}
+
+function JS_Date_Formats(){
+
+    const d = new Date();
+
+    let msg = `Date Formats:\n`       
+    + `new Date("2015-03-25"): ${new Date("2015-03-25")}\n`                         // The ISO 8601 syntax (YYYY-MM-DD) is also the preferred JavaScript date format.
+    + `new Date("2015-03"): ${new Date("2015-03")}\n`                               // ISO dates can be written without specifying the day (YYYY-MM).
+    + `new Date("2015"): ${new Date("2015")}\n`                                     // ISO dates can be written without month and day (YYYY).
+    + `new Date("2015-03-25T12:00:00Z"): ${new Date("2015-03-25T12:00:00Z")}\n`     // ISO Dates (Date-Time) - Date and time is separated with a capital T. UTC time is defined with a capital letter Z.
+    + `new Date("03/25/2015"): ${new Date("03/25/2015")}\n`                         // Short dates are written with an "MM/DD/YYYY" syntax like this
+    + `new Date("Mar 25 2015"): ${new Date("Mar 25 2015")}\n`                       // Long dates are most often written with a "MMM DD YYYY" syntax like this
+    + `new Date("25 January 2015"): ${new Date("25 January 2015")}\n`               // And, month can be written in full (January), or abbreviated (Jan)
+    + `new Date("JANUARY, 25, 2015"): ${new Date("JANUARY, 25, 2015")}\n`           // Commas are ignored. Names are case insensitive.
+    + `new Date("March 21, 2012"): ${new Date("March 21, 2012")}\n\n`     
+   
+    
+    + `Displaying Dates:\n`                                 
+    + `Use the Date.parse() method to convert date to milliseconds.\n`                                 
+    + `Date.parse("2015-03-25"): ${Date.parse("2015-03-25")}\n`
+    + `Date.parse("2015-03-25T12:00:00Z"): ${Date.parse("2015-03-25T12:00:00Z")}\n`
+    + `Date.parse("03/25/2015"): ${Date.parse("03/25/2015")}\n`                    
+    + `Date.parse("Mar 25 2015"): ${Date.parse("Mar 25 2015")}\n`                  
+    + `Date.parse("25 January 2015"): ${Date.parse("25 January 2015")}\n`          
+    + `Date.parse("JANUARY, 25, 2015"): ${Date.parse("JANUARY, 25, 2015")}\n`  
+    ;
+
+    alert(msg);
+}
+
+function JS_Get_Date_Methods(){
+
+    const d = new Date();
+
+    let msg = `Date Get Methods:\n`       
+    + `d.getFullYear(): ${d.getFullYear()}\n`                   // Get year as a four digit number (yyyy)            
+    + `d.getMonth(): ${d.getMonth()}\n`                         // Get month as a number (0-11)            
+    + `d.getDate(): ${d.getDate()}\n`                           // Get day as a number (1-31)           
+    + `d.getDay(): ${d.getDay()}\n`                             // Get weekday as a number (0-6)
+    + `d.getHours(): ${d.getHours()}\n`                         // Get hour (0-23)
+    + `d.getMinutes(): ${d.getMinutes()}\n`                     // Get minute (0-59)
+    + `d.getSeconds(): ${d.getSeconds()}\n`                     // Get second (0-59)
+    + `d.getMilliseconds(): ${d.getMilliseconds()}\n`           // Get millisecond (0-999)
+    + `d.getTime(): ${d.getTime()}\n\n`                         // Get time (milliseconds since January 1, 1970)
+
+    + `Date.now(): ${Date.now()}\n`                             // Date.now() returns the number of milliseconds since January 1, 1970.
+    + `d.getTimezoneOffset(): ${d.getTimezoneOffset()}\n\n`     // The getTimezoneOffset() method returns the difference (in minutes) between local time an UTC time.
+
+    + `UTC Date Get Methods:\n`                                     
+    + `d.getUTCFullYear(): ${d.getUTCFullYear()}\n`             // Get UTC year as a four digit number (yyyy)            
+    + `d.getUTCMonth(): ${d.getUTCMonth()}\n`                   // Get UTC month as a number (0-11)            
+    + `d.getUTCDate(): ${d.getUTCDate()}\n`                     // Get UTC day as a number (1-31)           
+    + `d.getUTCDay(): ${d.getUTCDay()}\n`                       // Get UTC weekday as a number (0-6)
+    + `d.getUTCHours(): ${d.getUTCHours()}\n`                   // Get UTC hour (0-23)
+    + `d.getUTCMinutes(): ${d.getUTCMinutes()}\n`               // Get UTC minute (0-59)
+    + `d.getUTCSeconds(): ${d.getUTCSeconds()}\n`               // Get UTC second (0-59)
+    + `d.getUTCMilliseconds(): ${d.getUTCMilliseconds()}\n`     // Get UTC millisecond (0-999)
+    + `d.getUTCTime(): ${d.getTime()}\n\n`                      // Get UTC time (milliseconds since January 1, 1970)
+    
+    ;
+
+    alert(msg);
+}
+
+function JS_Set_Date_Methods(){
+
+    const d = new Date();
+   
+    // Set the date, year, hour, milliseconds, minutes, month, seconds, and time
+    const msg = `Setting values:\n`
+    +`d.setDate(15);\n`                                 // Set the day as 15
+    +`d.setFullYear(2024);\n`                           // Set the year as 2024
+    +`d.setHours(12);\n`                                // Set the hour as 12
+    +`d.setMilliseconds(500);\n`                        // Set the milliseconds as 500
+    +`d.setMinutes(30);\n`                              // Set the minutes as 30
+    +`d.setMonth(6);\n`                                 // Set the month as July (6)
+    +`d.setSeconds(45);\n`                              // Set the seconds as 45
+    +`d.setTime(1655487212345);\n\n`                    // Set the time to a specific value
+
+    // Get the updated values
+   
+    + `Updated values:\n` 
+    + `d.getFullYear(): ${d.getFullYear()}\n`           // Get year as a four-digit number (yyyy)
+    + `d.getMonth(): ${d.getMonth()}\n`                 // Get month as a number (0-11)
+    + `d.getDate(): ${d.getDate()}\n`                   // Get day as a number (1-31)
+    + `d.getDay(): ${d.getDay()}\n`                     // Get weekday as a number (0-6)
+    + `d.getHours(): ${d.getHours()}\n`                 // Get hour (0-23)
+    + `d.getMinutes(): ${d.getMinutes()}\n`             // Get minute (0-59)
+    + `d.getSeconds(): ${d.getSeconds()}\n`             // Get second (0-59)
+    + `d.getMilliseconds(): ${d.getMilliseconds()}\n`   // Get millisecond (0-999)
+    + `d.getTime(): ${d.getTime()}\n\n`;                // Get time (milliseconds since January 1, 1970)
+
+    ;
+
+    alert(msg);
+}

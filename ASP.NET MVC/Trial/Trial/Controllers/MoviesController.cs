@@ -10,6 +10,25 @@ namespace Trial.Controllers
 {
     public class MoviesController : Controller
     {
+        // GET: Movies
+        public ActionResult Index()
+        {
+            var movies = GetMovies();
+
+            return View(movies);
+        }
+
+        private IEnumerable<Movie> GetMovies()
+        {
+            return new List<Movie>
+            {
+                new Movie {Id = 1, Name = "3 Idiots" },
+                new Movie {Id = 2, Name = "Lagaan" }
+            };
+        }
+
+
+
         // GET: Movies/Random
         public ActionResult Random()
         {

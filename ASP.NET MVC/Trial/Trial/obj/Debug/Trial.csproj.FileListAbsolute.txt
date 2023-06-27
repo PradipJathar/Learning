@@ -140,6 +140,8 @@ D:\Other\Learning\ASP.NET MVC\Trial\Trial\bin\roslyn\vbc.rsp
 D:\Other\Learning\ASP.NET MVC\Trial\Trial\bin\roslyn\VBCSCompiler.exe
 D:\Other\Learning\ASP.NET MVC\Trial\Trial\bin\roslyn\VBCSCompiler.exe.config
 D:\Other\Learning\ASP.NET MVC\Trial\Trial\bin\Antlr3.Runtime.dll
+D:\Other\Learning\ASP.NET MVC\Trial\Trial\bin\EntityFramework.dll
+D:\Other\Learning\ASP.NET MVC\Trial\Trial\bin\EntityFramework.SqlServer.dll
 D:\Other\Learning\ASP.NET MVC\Trial\Trial\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\Other\Learning\ASP.NET MVC\Trial\Trial\bin\Microsoft.Web.Infrastructure.dll
 D:\Other\Learning\ASP.NET MVC\Trial\Trial\bin\Newtonsoft.Json.dll
@@ -151,6 +153,8 @@ D:\Other\Learning\ASP.NET MVC\Trial\Trial\bin\System.Web.WebPages.Deployment.dll
 D:\Other\Learning\ASP.NET MVC\Trial\Trial\bin\System.Web.WebPages.dll
 D:\Other\Learning\ASP.NET MVC\Trial\Trial\bin\System.Web.WebPages.Razor.dll
 D:\Other\Learning\ASP.NET MVC\Trial\Trial\bin\WebGrease.dll
+D:\Other\Learning\ASP.NET MVC\Trial\Trial\bin\EntityFramework.xml
+D:\Other\Learning\ASP.NET MVC\Trial\Trial\bin\EntityFramework.SqlServer.xml
 D:\Other\Learning\ASP.NET MVC\Trial\Trial\bin\System.Web.Helpers.xml
 D:\Other\Learning\ASP.NET MVC\Trial\Trial\bin\System.Web.Mvc.xml
 D:\Other\Learning\ASP.NET MVC\Trial\Trial\bin\System.Web.Optimization.xml
@@ -161,7 +165,6 @@ D:\Other\Learning\ASP.NET MVC\Trial\Trial\bin\System.Web.WebPages.Razor.xml
 D:\Other\Learning\ASP.NET MVC\Trial\Trial\bin\Newtonsoft.Json.xml
 D:\Other\Learning\ASP.NET MVC\Trial\Trial\bin\Antlr3.Runtime.pdb
 D:\Other\Learning\ASP.NET MVC\Trial\Trial\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Other\Learning\ASP.NET MVC\Trial\Trial\obj\Debug\Trial.csproj.AssemblyReference.cache
 D:\Other\Learning\ASP.NET MVC\Trial\Trial\obj\Debug\Trial.csproj.CoreCompileInputs.cache
 D:\Other\Learning\ASP.NET MVC\Trial\Trial\obj\Debug\Trial.csproj.CopyComplete
 D:\Other\Learning\ASP.NET MVC\Trial\Trial\obj\Debug\Trial.dll
